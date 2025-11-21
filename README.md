@@ -1,0 +1,1 @@
+Projects created for the program "Mais Ciência na Escola", an initiative by the Brazilian Federal Government, in partnership with the Ministries of Science, Technology and Innovation (MCTI) and Education (MEC). The program aims to promote digital literacy and scientific education in Brazil's basic education system.
