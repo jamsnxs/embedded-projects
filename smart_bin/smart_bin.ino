@@ -16,18 +16,19 @@ void setup() {
   servo.attach(PIN_SERVO);
   pinMode(PIN_TRIG, OUTPUT);
   pinMode(PIN_ECHO, INPUT);
+  digitalWrite(PIN_TRIG, LOW);  // Ensure TRIG is LOW for clean start
   Serial.begin(115200);
 }
 
 float measure_distance_cm() {
-  digitalWrite(PIN_TRIG, LOW);  // Start the HC with a clean state
+  digitalWrite(PIN_TRIG, LOW);  // Protocol requirement
   delayMicroseconds(2);
   digitalWrite(PIN_TRIG, HIGH);
   delayMicroseconds(10);
   digitalWrite(PIN_TRIG, LOW);
 
   unsigned long echo = pulseIn(PIN_ECHO, HIGH);
-  return (echo * 0.0343f) / 2.0f;  // convert echo time to distance (cm)
+  return (echo * 0.0343f) / 2.0f;  // Convert echo time to distance (cm)
 }
 
 void loop() {
@@ -37,7 +38,7 @@ void loop() {
   unsigned long now = millis();
   static unsigned long print_timestamp_ms{};
 
-  // Serial print for debug, no delay are add to the loop execution
+  // Logging (Non-blocking): Log every 1000 ms
   if (now - print_timestamp_ms >= 1000) {
     Serial.print("distance: ");
     Serial.print(distance);
