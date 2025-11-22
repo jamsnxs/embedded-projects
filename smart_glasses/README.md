@@ -2,6 +2,6 @@
 **Components**
 - NodeMCU ESP8266
 - Ultrasonic Distance Sensor HC-SR04
-- Passive buzzer
+- Active buzzer
 
 ![Schematic View](schematic.png)
