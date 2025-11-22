@@ -1,4 +1,4 @@
-# Smart trash bin
+# Smart Glasses
 **Components**
 - NodeMCU ESP8266
 - Ultrasonic Distance Sensor HC-SR04
