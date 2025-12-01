@@ -32,7 +32,6 @@ float measureDistanceCm() {
 
 void loop() {
   float distanceCm = measureDistanceCm();
-  if (distanceCm > 400.0f) return;
 
   unsigned long now = millis();
   static unsigned long lastLogTimeMs{};
