@@ -33,7 +33,6 @@ float measure_distance_cm() {
 
 void loop() {
   float distance = measure_distance_cm();
-  if (distance > 100.0f) return;
 
   unsigned long now = millis();
   static unsigned long print_timestamp_ms{};
